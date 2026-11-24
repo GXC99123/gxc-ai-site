@@ -1,6 +1,15 @@
 /* 記事の一覧データ(build.js が articles.js から自動で作ります。直接は編集しません) */
 window.GXC_NEWS = [
   {
+    "slug": "gemini-4-neon",
+    "cat": "ai",
+    "date": "2026-11-18",
+    "flash": true,
+    "title": "Google、知能とコストのバランスを取る「Gemini 4 Neon」を発表 総合指標で3位、入力は3ドル",
+    "summary": "Googleが11月18日に発表したGemini 4の中核モデル。100万トークンのコンテキストを持ち、思考レベルは4段階。Google公表の評価では総合3位、コーディングエージェント指標で1位としています。",
+    "kw": "google gemini neon llm エージェント コーディング antigravity"
+  },
+  {
     "slug": "rubin-hpc",
     "cat": "parts",
     "date": "2026-11-17",
