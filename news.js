@@ -1,6 +1,15 @@
 /* 記事の一覧データ(build.js が articles.js から自動で作ります。直接は編集しません) */
 window.GXC_NEWS = [
   {
+    "slug": "gpt-6-2-astra-sol",
+    "cat": "ai",
+    "date": "2026-11-18",
+    "flash": true,
+    "title": "OpenAI、「GPT-6.2 Astra」と「GPT-6.2 Sol」を発表 少ないトークンで前世代超え、Xでは評価が割れる",
+    "summary": "OpenAIが11月17日（米国時間）に発表した2モデル。AstraはAPI価格が前世代から20%安くなり、Solは据え置き。公式評価では専門業務で前世代超えの一方、Xでの初期反応は割れています。",
+    "kw": "openai gpt chatgpt codex astra sol エージェント"
+  },
+  {
     "slug": "gemini-4-neon",
     "cat": "ai",
     "date": "2026-11-18",
