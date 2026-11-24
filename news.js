@@ -1,6 +1,15 @@
 /* 記事の一覧データ(build.js が articles.js から自動で作ります。直接は編集しません) */
 window.GXC_NEWS = [
   {
+    "slug": "claude-ship",
+    "cat": "ai",
+    "date": "2026-11-24",
+    "flash": true,
+    "title": "Anthropic、「Claude Ship」を発表 PRのレビューから修正、承認までAIが進める",
+    "summary": "Anthropicが米国時間11月23日に発表したGitHub向けの仕組み。Code ReviewにPR StewardとClaude Approvalsを組み合わせ、レビューから修正、チームのポリシーの範囲での承認までAIが進めます。",
+    "kw": "anthropic claude ship プルリクエスト pr レビュー 承認 github claude code"
+  },
+  {
     "slug": "glm-5-4",
     "cat": "ai",
     "date": "2026-11-23",
