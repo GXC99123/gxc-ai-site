@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Anthropic、「Claude Ship」を発表 PRのレビューから修正、承認までAIが進める | GXCのAIサイト</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" data-page="article" data-slug="claude-ship" data-cat="ai">
+  <header class="site-header" id="site-header"></header>
+
+  <main class="wrap main">
+    <article class="article cat-ai">
+      <nav class="crumbs" aria-label="パンくずリスト"><a href="index.html">トップ</a><span aria-hidden="true">›</span><a href="ai.html">AI</a></nav>
+      <div class="meta"><span class="pill">AI</span><span class="badge-flash">速報</span><time datetime="2026-11-24">2026.11.24 (火)</time></div>
+      <h1>Anthropic、「Claude Ship」を発表 PRのレビューから修正、承認までAIが進める</h1>
+      <figure class="article-hero"><img src="images/claude-ship.jpg" alt="チェックマークの付いた書類を載せた紙の船が波の上を進むイラスト"></figure>
+      <p class="lead">Anthropicは米国時間11月23日、GitHubのプルリクエスト（PR）をAIエージェントがレビューし、問題を直し、チームの決めたルールの範囲で承認まで進める「Claude Ship」をベータ版として発表しました。コードを書く部分はClaude Codeが担うようになり、残っていた「書いたあと」の待ち時間が次のボトルネックになっていた、というのが今回の出発点です。対象はClaudeのTeamプランとEnterpriseプランで、GitHubのリポジトリで使えます。</p>
+      <aside class="points" aria-label="この記事のポイント">
+        <h2>この記事のポイント</h2>
+        <ul><li>Code Review（一般提供済み）にPR StewardとClaude Approvals（どちらもベータ）を組み合わせた3つの仕組み</li><li>PR StewardはCIの失敗やマージ競合、レビュー指摘への対応を進めるが、承認とマージはしない</li><li>Claude Approvalsはリポジトリ内の承認ポリシーに従い、定型的な変更を自動承認できる。まずは「観察専用モード」での試用が推奨されている</li><li>料金はトークン従量課金。対象はTeam／EnterpriseプランでGitHubのみ。マージしたPRが2倍超、差し戻しが40%以上減という数字はAnthropic自身の実績</li></ul>
+      </aside>
+      <div class="article-body">
+        <h2>何が発表されたのか</h2>
+        <p>Claude Shipは、1つのエージェントではなく3つの仕組みを組み合わせたものです。Anthropicの説明では、開発の流れは「コードを書く」から「変更を届ける」へ移っていて、Claude Codeがコードを書くようになったぶん、書いたあとのレビューや修正、承認の待ち時間が目立つようになったといいます。背景として、GitHubが10月28日に公開したOctoverse 2026では、9月に作られたプルリクエストの40%以上がAIエージェントの下書きから始まっていたとされています。書く量が増えたぶん、受け取る側の作業も増えている、というわけです。</p>
+        <p>Claude Shipは、この「書いたあと」の流れを1本につなげることを狙っています。レビューで問題を見つけ、直し、承認の判断まで進める。ただし、最後のマージ（取り込み）のボタン自体を押すのは、開発者の権限とリポジトリのブランチルールが決める、という線引きになっています。</p>
+        <h2>3つの仕組みは何をするのか</h2>
+        <p>まず「Code Review」は、すでに一般提供されているレビュー機能です。PRの変更内容をリポジトリ全体と照らし合わせて複数の観点から調べ、見つけた問題を検証して分類し、PRにコメントとして投稿します。指摘は重要度別に整理され、レビューの深さはリポジトリごとに「Quick」「Standard」「Deep」の3段階から選べます。Anthropicによると、レビューの多くは6〜10分ほどで終わり、以前の20分程度から短くなったとしています。</p>
+        <ul><li>PR Steward（ベータ）：CIの失敗、マージ競合、レビューへの指摘に対応し、PRをマージできる状態に保つエージェントです。指摘はCode Reviewのものだけでなく、ほかのレビューツールやチームメンバーからのものも対象になります。変更をプッシュするたびに、何を変えたかと、元に戻す方法をコメントに残します。開発者は「@claude」と書いて作業を指示でき、「@claude stop」で止めることもできます。承認とマージは行わない設計です</li><li>Claude Approvals（ベータ）：チームがリポジトリ内のファイルに書いた承認ポリシーに従って、PRを承認するかどうかを判断します。Anthropicは「より賢いCODEOWNERSファイルのようなもの」と説明しています。ポリシーで許可すれば定型的な変更を自動承認でき、特定の変更には人間の承認を必須にできます。判断材料にはCode Reviewの指摘や、自然言語で定義した分類器を使えます</li></ul>
+        <p>3つの役割の分け方が、今回の発表の要点です。問題を見つける役と、直す役と、承認する役が別々になっていて、直す役のPR Stewardには承認の権限がありません。X上でも、修正するエージェントと承認するエージェントが別である点を挙げる投稿があり、個人の感想としては「権限の分離がきちんとしている」という受け止め方が見られます。</p>
+        <h2>「/ship」コマンドで開発者側からも</h2>
+        <p>開発者が自分の手元から使うための入り口も用意されました。Claude Codeの新しいコマンド「/ship」を実行すると、Claudeがコードのプッシュ、PRの作成、レビュー、指摘事項や失敗したチェックへの対応まで進めます。/shipは発表当日から、Claude Codeとデスクトップアプリで順次提供されます。マージできるかどうかは、開発者の権限とリポジトリのブランチルールによって決まります。</p>
+        <p>管理者がリポジトリ単位でClaude Shipを有効にすれば、開発者が/shipを実行しなくても、チームのPRに自動で適用されます。管理者はレビューの深さや実行タイミング、月額の利用上限を設定できます。Claude Approvalsは、接続済みリポジトリのデフォルトブランチにポリシーファイルを配置すると動作を開始し、管理者が無効化することもできます。既存のブランチ保護や必須チェックとも併用可能です。</p>
+        <h2>数字の読み方に注意</h2>
+        <p>Anthropicは、自社のClaude Code開発チームでの実績として、6月から9月にかけてマージしたPRの数が2倍以上に増え、マージ後に変更が取り消されたPRの割合は40%以上減少した、としています。ただ、この数字には読み方に注意が必要です。同チームではCode Reviewをほかのレビュー手段と併用しており、効果のすべてがClaude Shipによるものとは言えません。あくまでAnthropic自身の実績として読むのが安全です。</p>
+        <p>また、承認の判断をAIに任せることへの懸念にも、Anthropicは自ら触れています。Claude ShipはAIを使う仕組みであり、バグやセキュリティ上の脆弱性を見逃す可能性がある、という注意書きです。そのため同社は、まず承認せずに判断結果だけを確認する「観察専用モード」で試すことを推奨しています。十分に信頼できると判断した段階で、ブランチ保護の設定によってClaude Approvalsの承認を必須にできる、という段取りです。</p>
+        <h2>Xでの反応</h2>
+        <p>発表当日のXでは、Anthropicの開発者向け公式アカウント「@ClaudeDevs」の投稿が大きく広がりました。投稿から数時間で140万回以上表示され、1万4500件以上の「いいね」が付いたと報じられています。Claude Codeを率いるボリス・チェルニー氏の投稿も、4000件以上の「いいね」を集めました。投稿の文面は「Claudeはプルリクエストをレビューし、修正に取り組み、チームのポリシーが許すものを承認できます。目標は、書くのと同じ速さで届けられるようにすることです」という内容です。</p>
+        <p>開発者からの反応は、「ClaudeがPRを承認できるようになった」という要約が目立ちました。なかには「承認できる部分だけが注目されているが、導入する順番が大事で、まずは何も承認しないモードから始めるべきだ」という指摘もあり、個人の感想として広がっています。Xの投稿は第一印象や意見が中心で、条件のそろった検証ではない点には注意が必要です。</p>
+        <h2>料金と利用条件</h2>
+        <p>料金はトークン使用量に応じた従量課金で、PRの数や規模、レビューの深さや頻度、PR Stewardの作業量によって変わります。Claude Approvals自体に基本料金はかかりませんが、ポリシー内の分類器にはトークン使用量に応じた料金が発生します。Claudeのレビューを呼び出すポリシーでは、観察専用モードでもCode Reviewの料金が発生します。/shipの実行は通常のClaude Codeの利用として扱われます。</p>
+        <p>対象はClaudeのTeamプランとEnterpriseプランのユーザーで、GitHubのリポジトリで利用できます。ゼロデータ保持（ZDR）、HIPAA構成、顧客管理の暗号鍵を使う組織は対象外となります。条件を満たすEnterpriseプランの組織は、最低1万ドル分のClaude Ship用クレジットを申請できます。申請期限は2027年1月15日で、申請から30日以内に利用する必要があります。</p>
+        <h2>普通のユーザーにとっての意味</h2>
+        <p>Claude Shipは、いまのところ開発チーム向けの仕組みで、一般の人が直接触れるものではありません。ただ、影響は間接的に広がる可能性があります。AIが書いたコードが増えるなかで、レビューと承認の流れが速くなれば、使っているアプリやサービスの更新が届くまでの時間も短くなるかもしれません。</p>
+        <p>一方で、「承認」という判断をAIに任せることへの慎重さも、今回の発表のなかに残されています。観察専用モードから始める段取りや、承認とマージを分ける設計、見逃しの可能性への注意書きは、便利さと安全性のバランスを取るためのものです。導入するチームが、どの変更をAIに任せ、どの変更を人に残すかをポリシーとして書き分けられるかどうかが、使いこなしの分かれ目になりそうです。</p>
+        <h2>出典</h2>
+        <ul><li>ITmedia AI＋「Anthropic、PRのレビューから修正、承認までをAIで支援する『Claude Ship』公開」（2026年11月24日）<a href="https://www.itmedia.co.jp/aiplus/article/2611/24/2000003404/">https://www.itmedia.co.jp/aiplus/article/2611/24/2000003404/</a></li><li>GIGAZINE「AIがプルリクエストのレビューや修正を行い自動承認までしてくれる『Claude Ship』が登場」（2026年11月24日）<a href="https://gigazine.net/news/20261124-claude-ship/">https://gigazine.net/news/20261124-claude-ship/</a></li><li>TechCrunch「Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes」（2026年11月23日）<a href="https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/">https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/</a></li><li>The Register「Claude Ship puts AI at the helm of pull request approvals」（2026年11月24日）<a href="https://www.theregister.com/ai-and-ml/2026/11/24/claude-ship-puts-ai-at-the-helm-of-pull-request-approvals/5311883">https://www.theregister.com/ai-and-ml/2026/11/24/claude-ship-puts-ai-at-the-helm-of-pull-request-approvals/5311883</a></li><li>ClaudeDevs（Anthropic開発者向け公式アカウント）のX投稿（2026年11月23日）<a href="https://x.com/ClaudeDevs/status/2124959436640858475">https://x.com/ClaudeDevs/status/2124959436640858475</a></li></ul>
+      </div>
+    </article>
+    <section id="related" aria-label="関連記事"></section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</div>
+<script src="news.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
