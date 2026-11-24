@@ -502,3 +502,6 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
+
+.article-hero { margin: 20px 0 8px; }
+.article-hero img { display: block; width: 100%; height: auto; border-radius: 12px; }
