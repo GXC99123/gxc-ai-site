@@ -1,0 +1,27 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>GXCのAIサイト</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+
+<div id="app" data-page="home">
+  <header class="site-header" id="site-header"></header>
+  <div class="flash-strip" id="flash" hidden></div>
+
+  <main class="wrap main">
+    <section class="intro">
+      <h1>AI・PCパーツ・PC情報の速報</h1>
+      <p class="lead">AIの新しい動き、PCパーツの発表や価格、パソコンまわりの話題を、短くまとめてお届けします。</p>
+      <p class="count" id="latest-date"></p>
+    </section>
+    <section id="latest" aria-label="新着ニュース"></section>
+    <section id="cat-sections" aria-label="カテゴリー別の最新"></section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</div>
+
+<script src="news.js"></script>
+<script src="site.js"></script>
+
+</body></html>

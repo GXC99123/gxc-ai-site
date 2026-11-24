@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Baiduの「Unlimited OCR 2」、数百ページの文書でも処理が重くならない新OCR | GXCのAIサイト</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" data-page="article" data-slug="unlimited-ocr-2" data-cat="ai">
+  <header class="site-header" id="site-header"></header>
+
+  <main class="wrap main">
+    <article class="article cat-ai">
+      <nav class="crumbs" aria-label="パンくずリスト"><a href="index.html">トップ</a><span aria-hidden="true">›</span><a href="ai.html">AI</a></nav>
+      <div class="meta"><span class="pill">AI</span><time datetime="2026-11-06">2026.11.06 (金)</time></div>
+      <h1>Baiduの「Unlimited OCR 2」、数百ページの文書でも処理が重くならない新OCR</h1>
+      <p class="lead">BaiduのERNIEチームが開発した、長い文書向けのOCRモデルです。ページ数が増えても、メモリ使用量と処理速度がほぼ一定に保たれるとしています。</p>
+      <aside class="points" aria-label="この記事のポイント">
+        <h2>この記事のポイント</h2>
+        <ul><li>数百ページの長い文書を、一括で解析できるOCRモデル</li><li>ページが増えても、メモリ使用量と1ステップの処理速度がほぼ一定</li><li>100ページ規模で、標準的な方式より7.0倍、前身のモデルより5.6倍速い</li><li>ライセンスはMIT</li></ul>
+      </aside>
+      <div class="article-body">
+        <h2>ページが増えると重くなる問題</h2>
+        <p>OCRは、画像や紙の文書から文字を読み取ってテキストにする技術です。近ごろのAI型のOCRは、文書全体を文脈ごと読むので精度が高い一方、ページ数が増えるほど計算量が膨らむという弱点がありました。</p>
+        <p>BaiduのERNIEチームが開発した「Unlimited OCR 2」は、この弱点を狙ったモデルです。前身のモデルに残っていた「ページが増えるほど重くなる」問題を、新しい注意機構「SR-SWA」で解いたといいます。</p>
+        <h2>仕組みと数字</h2>
+        <p>文書をかたまり(チャンク)に分けて処理し、不要になったデータを手放すデコード方法を組み合わせています。これにより、数百ページあってもメモリ使用量と1ステップあたりの処理速度がほぼ一定に保たれます。</p>
+        <ul><li>100ページ規模の文書で、標準的なFull Attentionに比べて1ステップが7.0倍、前身のR-SWAに比べて5.6倍速い</li><li>ベンチマークの「MPDocBench」(最大30ページ)と「MarathonDocBench」(最大300ページ)の両方で、最先端の結果を達成したと説明</li></ul>
+        <h2>使うときのポイント</h2>
+        <p>ライセンスはMITで、利用や改変の自由度が高いのが利点です。手元のPCで動かせるモデルとして紹介されているので、社外に出せない文書を自分の環境で処理したい場合の選択肢になりそうです。ただ、必要なメモリ量などの動作条件は今回の情報では分からないため、導入前に確認したいところです。</p>
+      </div>
+    </article>
+    <section id="related" aria-label="関連記事"></section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</div>
+<script src="news.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

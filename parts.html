@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>PCパーツのニュース | GXCのAIサイト</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" data-page="parts" data-cat="parts">
+  <header class="site-header" id="site-header"></header>
+  <div class="flash-strip" id="flash" hidden></div>
+
+  <main class="wrap main">
+    <div class="page-head">
+      <h1>PCパーツのニュース</h1>
+      <p class="lead">CPU、GPU、メモリ、SSDなど、自作PCに関わるパーツの発表や価格の動きをまとめています。</p>
+    </div>
+    <div class="toolbar">
+      <div class="search">
+        <label class="sr-only" for="q">PCパーツの記事を検索</label>
+        <input id="q" type="search" placeholder="キーワードで探す(例: GPU)" autocomplete="off">
+      </div>
+      <span class="count" id="count" aria-live="polite"></span>
+    </div>
+    <div id="list"></div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</div>
+<script src="news.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>NVIDIA、AIエージェントが使える計算ライブラリを拡充 天文から創薬まで | GXCのAIサイト</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" data-page="article" data-slug="cuda-x-agents" data-cat="ai">
+  <header class="site-header" id="site-header"></header>
+
+  <main class="wrap main">
+    <article class="article cat-ai">
+      <nav class="crumbs" aria-label="パンくずリスト"><a href="index.html">トップ</a><span aria-hidden="true">›</span><a href="ai.html">AI</a></nav>
+      <div class="meta"><span class="pill">AI</span><time datetime="2026-11-17">2026.11.17 (火)</time></div>
+      <h1>NVIDIA、AIエージェントが使える計算ライブラリを拡充 天文から創薬まで</h1>
+      <p class="lead">GPU向けライブラリ群「CUDA-X」に、天文、核融合、創薬、材料、生物の分野向けの新しい道具が加わりました。人間の研究者に加え、AIエージェントが呼び出して使うことも想定しています。</p>
+      <aside class="points" aria-label="この記事のポイント">
+        <h2>この記事のポイント</h2>
+        <ul><li>Rubin HPCと同じSC26で、CUDA-Xの拡充も発表</li><li>AIエージェントが呼び出して使う道具として位置づけ</li><li>天文向けのcuPhotonは、1か月以上かかった解析が8分になったと説明</li><li>材料向けのDaviatorは、計算が最大22倍速く、コストは最大75%減とされる</li></ul>
+      </aside>
+      <div class="article-body">
+        <h2>研究者だけでなくAIエージェントも使う</h2>
+        <p>NVIDIAはRubin HPCと同じ場で、GPU向けライブラリ群「CUDA-X」の拡充も発表しました。人間の研究者だけでなく、AIエージェントが呼び出して使う道具として位置づけている点が特徴です。</p>
+        <p>同社の考え方はこうです。AIエージェントが材料や分子、設計の候補を大量に探すようになると、それを確かめるシミュレーションの需要が増えます。シミュレーションが速くなれば、仮説を検証して絞り込むまでの一巡が短くなり、研究者は有望な候補の実験に集中できます。ハイパースケール・HPC担当のイアン・バック副社長も、シミュレーションの高速化が発見の高速化につながるという趣旨のコメントを出しています。</p>
+        <h2>分野ごとの主な内容</h2>
+        <ul><li>cuPhoton(天文): 世界の電波望遠鏡をつなぐ「イベント・ホライズン・テレスコープ」の観測データ処理で、1か月以上かかっていた解析が8分になったとしています。小型機のDGX Sparkでも動きます。</li><li>cuPhoton.xLens(核融合): 米Pacific Fusionの研究者が、プラズマのシミュレーションを走らせたまま結果を取り出して可視化するのに使っています。Nemotronをベースにしたエージェントと組み合わせ、途中で方向を調整することもできます。</li><li>cuPotential(創薬): 既存の分子シミュレーションソフトを最大3倍速くします。Schrödinger、AMBER、NAMD、GROMACS、LAMMPSなどの開発コミュニティと連携しています。</li><li>Daviator(材料): 材料計算ソフトVASP向けで、量子力学計算が最大22倍速くなり、コストは最大75%下がるとしています。</li><li>cuSpa(生物): 新たにオープンソース化されました。米メモリアル・スローン・ケタリングがんセンターでは、細胞の空間配置を表すグラフの作成が、CPUの900倍速くなったといいます。</li></ul>
+        <h2>数字の見方</h2>
+        <p>速度の向上は、いずれもNVIDIAや利用者側の説明で、条件によって結果は変わります。「最大」と付く数字は、もっとも良い場合の値と受け止めるのが妥当です。それでも、解析が月単位から分単位になる例は、研究の進め方そのものを変える可能性があります。</p>
+      </div>
+    </article>
+    <section id="related" aria-label="関連記事"></section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</div>
+<script src="news.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

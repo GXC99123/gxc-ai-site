@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>AIのニュース | GXCのAIサイト</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" data-page="ai" data-cat="ai">
+  <header class="site-header" id="site-header"></header>
+  <div class="flash-strip" id="flash" hidden></div>
+
+  <main class="wrap main">
+    <div class="page-head">
+      <h1>AIのニュース</h1>
+      <p class="lead">生成AIの新しいモデルや、AIを使ったサービス、技術の動きをまとめています。</p>
+    </div>
+    <div class="toolbar">
+      <div class="search">
+        <label class="sr-only" for="q">AIの記事を検索</label>
+        <input id="q" type="search" placeholder="キーワードで探す(例: モデル名)" autocomplete="off">
+      </div>
+      <span class="count" id="count" aria-live="polite"></span>
+    </div>
+    <div id="list"></div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</div>
+<script src="news.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
