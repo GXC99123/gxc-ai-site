@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>PrismML、27Bモデルを5.9GBに圧縮した「Ternary Bonsai 2.5 27B」を発表 エージェント性能はフル精度並み | GXCのAIサイト</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" data-page="article" data-slug="ternary-bonsai-2-5-27b" data-cat="ai">
+  <header class="site-header" id="site-header"></header>
+
+  <main class="wrap main">
+    <article class="article cat-ai">
+      <nav class="crumbs" aria-label="パンくずリスト"><a href="index.html">トップ</a><span aria-hidden="true">›</span><a href="ai.html">AI</a></nav>
+      <div class="meta"><span class="pill">AI</span><span class="badge-flash">速報</span><time datetime="2026-11-24">2026.11.24 (火)</time></div>
+      <h1>PrismML、27Bモデルを5.9GBに圧縮した「Ternary Bonsai 2.5 27B」を発表 エージェント性能はフル精度並み</h1>
+      <figure class="article-hero"><img src="images/ternary-bonsai-2-5-27b.jpg" alt="チップの上に生えた小さな盆栽の木と、根のように広がる光る回路のイラスト"></figure>
+      <p class="lead">AI企業のPrismMLは米国時間11月24日、AIモデル「Ternary Bonsai 2.5 27B」を発表しました。Alibabaのオープンモデル「Qwen3.8-27B」を土台に、重みをマイナス1、0、プラス1の3つの値だけに圧縮したモデルで、容量はわずか5.93GBです。元のモデルの約9分の1の大きさながら、道具を使いながら何段階もの作業を進める「エージェント」としての性能は、圧縮していない元のモデルとほぼ同じ水準に達したとしています。重みはApache 2.0ライセンスで公開され、手元のPCやMacでも動かせます。</p>
+      <aside class="points" aria-label="この記事のポイント">
+        <h2>この記事のポイント</h2>
+        <ul><li>Qwen3.8-27Bを土台に、重みを-1・0・+1の3値だけに圧縮。1重みあたり1.76ビット、容量は5.93GBで元のFP16版（53.8GB）の約9分の1</li><li>道具呼び出しの5指標の平均は77.2で、フル精度の77.7とほぼ同水準（PrismMLの自社評価）</li><li>エージェント型コーディングでは前世代の弱点を克服。SWE-bench Verifiedは60.8から75.6へ、DeepSWEは0から27.0へ</li><li>生成速度はH100で毎秒291トークン、RTX 4090でも毎秒204トークン（PrismMLの公表値）。文脈は最大26万トークン</li><li>Apache 2.0ライセンスで重みを公開。llama.cppやMLXで動き、NVIDIA・IntelのGPUやApple製品に対応</li></ul>
+      </aside>
+      <div class="article-body">
+        <h2>何が発表されたのか</h2>
+        <p>PrismMLは2026年11月24日（米国時間、日本時間では11月25日）、AIモデル「Ternary Bonsai 2.5 27B」を発表しました。モデルの重みは同日に公開され、Hugging Faceから入手できます。PrismMLは、米カリフォルニア工科大学の研究者チームから生まれた企業で、モデルの圧縮を専門にしています。</p>
+        <p>このモデルは、9月に公開された前世代「Ternary Bonsai 2 27B」の改良版です。大きさは前世代と同じ5.93GBのまま、エージェントとしての働きが大きく強くなりました。PrismMLは「同じメモリ使用量のモデルのなかで、エージェントの仕事では圧倒的に強い」と説明しています。狙いは、クラウドにデータを送らず、手元の端末のなかで動くコーディング支援や文書作成の道具を作るためのモデルです。</p>
+        <p>PrismMLは発表とあわせて、公式Xアカウントで実際の動作のデモも公開しました。ソフトウェアの不具合を再現して修正する様子や、スクリーンショット1枚からWebページを作り直す様子です。発表直後には、Xで3Dの世界を作るデモを試した利用者の投稿も見られました。</p>
+        <h2>「3値」の重みで9分の1に</h2>
+        <p>圧縮の仕組みは、モデルの「重み」と呼ばれる数字を、-1、0、+1の3つの値だけに置き換えることです。ふつうのモデルでは重みを16ビットの浮動小数点数で持っていますが、Bonsaiでは1つの重みが約1.76ビット分の情報しか使いません。128個の重みごとに1つの倍率を共有する工夫と、重みを回転させてから3値に割り当てる工夫を組み合わせています。</p>
+        <p>この方法で、約270億パラメータのモデルが5.93GBに収まります。圧縮していないFP16版は53.8GBなので、約9分の1の大きさです。土台のQwen3.8-27Bは、注意機構の一部を軽い線形注意に置き換えた「ハイブリッド注意」の構造を持ち、文脈は最大26万トークンに対応します。長い資料を読み込ませる使い方にも対応できる設計です。</p>
+        <p>小さくするだけなら、従来の量子化でもできました。問題は、小さくしたときにエージェントの仕事が極端に弱くなることです。前世代のBonsai 2は、一般的なベンチマークでは元のモデルの98%近い性能を保ったとされましたが、道具を何度も呼びながら進める作業では大きく崩れました。今回の2.5は、その弱点を直すことに狙いを絞った改良版です。</p>
+        <h2>ベンチマーク結果：前世代の弱点を克服</h2>
+        <p>PrismMLが公表したベンチマークの数字は、次の通りです。いずれも同社による自社評価で、比較対象は圧縮していないQwen3.8-27B（FP16）と前世代のBonsai 2です。評価は「思考モード」で行われました。</p>
+        <ul><li>SWE-bench Verified（実際のソフトウェアの不具合修正）：Bonsai 2.5は75.6、元のモデルは80.6、前世代は60.8</li><li>DeepSWE v1.1（コード修正の難問）：Bonsai 2.5は27.0、元のモデルは30.1、前世代は0</li><li>Terminal-Bench 2.1（端末操作を伴う作業）：Bonsai 2.5は60.1、元のモデルは70.8、前世代は52.8</li><li>AppWorld（日常アプリを模した9つのサービスを操作）：Bonsai 2.5は90.5、元のモデルは93.2、前世代は51.2</li><li>τ³-Bench（模擬の顧客との複数回のやり取り）：Bonsai 2.5は73.9で、元のモデルの72.8を上回る</li></ul>
+        <p>とくに変わったのがAppWorldです。前世代は51.2と元のモデルの半分ほどしか取れず、長い作業の途中で失敗していました。今回は90.5まで伸び、元のモデルの93.2にあと2.7ポイントまで迫っています。DeepSWEでは、前世代は1問も解けなかったのに対し、今回は27.0と元のモデルの9割に達しました。</p>
+        <p>道具呼び出しの能力を測る5つの指標の平均では、Bonsai 2.5は77.2で、フル精度の77.7とほぼ同じ水準です。PrismMLによれば、3つの指標ではフル精度を上回っています。エージェント型コーディングの3指標の平均でも、フル精度の約9割を保ち、前世代の約6割から大きく改善しました。</p>
+        <p>PrismMLは、前世代の失敗のしかたも説明しています。小さく圧縮したモデルは、結果を確認せずに長いスクリプトを書いて「できた」と決めつけてしまう、という癖が出やすかったといいます。今回は、道具の結果を読み取って失敗したら進め方を変える能力と、同じ動作を繰り返す癖を抑えることに力を入れたとしています。実際、今回のモデルは前世代より少ない手順と少ないトークンで作業を終えるとのことです。</p>
+        <h2>弱いところもある：単発のコーディングはわずかに後退</h2>
+        <p>一方で、すべてが前世代より良くなったわけではありません。1問だけを解く単発のコーディングでは、わずかに後退した指標もあります。</p>
+        <ul><li>LiveCodeBench v6（1問だけのプログラミング問題）：Bonsai 2.5は83.0で、前世代の83.8をわずかに下回る。元のモデルは87.6</li><li>BFCL v4（道具の繰り返し呼び出しと記憶の管理）：Bonsai 2.5は67.2で、元のモデルの70.8に及ばない</li><li>Terminal-Bench 2.1も60.1と、元のモデルの70.8とは10.7ポイントの差が残る</li></ul>
+        <p>つまり、今回の改良は「何段階も道具を使いながら進める作業」に狙いを絞ったもので、1問だけを解く力や、細かな道具の使い分けでは、元のモデルとの差がまだ残っています。PrismML自身も、数時間かかるような長い作業の評価はまだ行っていないとしています。</p>
+        <p>また、これらの数字はすべてPrismML自身の評価です。評価の回数や乱数の種といった条件は公表されておらず、第三者による独立した検証はこれからです。学習データや具体的な学習方法も公開されていません。数字をそのまま受け取るのではなく、「小さなモデルでここまで来た」という方向性として読むのがよさそうです。</p>
+        <h2>どこで動くのか：手元のPCやMacでも</h2>
+        <p>実用面での特徴は、動作環境の広さです。NVIDIAとIntelのGPUではllama.cpp、MacやiPhone、iPadではMLXで動きます。Q2_0形式のファイルは、ふつうのllama.cppでも動きます。</p>
+        <p>速度も公表されています。PrismMLの公表値では、H100では1秒あたり291トークンの生成速度で、2,000トークンの入力の処理は1秒あたり3,200トークンです。個人向けのRTX 4090でも、1秒あたり204トークン、入力の処理は1秒あたり約3,060トークンとしています。複数のトークンをまとめて予測する「MTP」付きの版では、NVIDIAのGPUで生成が1.5〜1.8倍速くなるとのことです。</p>
+        <p>容量が小さいため、ビデオメモリが10GBのRTX 3080でも動いたという利用者の報告も、Hugging Faceのページで紹介されています。24GBのGPUなら、26万トークンの文脈をまるごと載せたまま使えるとされています。クラウドにデータを送らずに、自分の端末のなかだけで資料を扱いたい用途に向いた大きさです。</p>
+        <h2>普通のユーザーにとっての意味</h2>
+        <p>Bonsai 2.5は、一般の人が直接使うモデルというより、開発者や企業が道具に組み込むためのモデルです。ただ、影響は間接的に広がる可能性があります。手元の端末で動くコーディング支援や、社内文書を読み込んで答える仕組みが、クラウドにデータを送らずに作りやすくなれば、プライバシーを気にする場面でのAIの使い方が広がります。</p>
+        <p>もう一つの意味は、圧縮技術の進み方です。これまで「小さくするとエージェントの仕事が崩れる」という弱点がありましたが、今回の結果は、その弱点が狙った改良でかなり直せることを示しました。大きなモデルをそのまま使うのではなく、小さくして手元で動かす、という選択肢が、実用的な水準に近づきつつあります。</p>
+        <p>とはいえ、性能の数字は開発元自身の評価であり、実際の使い勝手は使う人の環境や作業の内容で変わります。手元のPCでAIエージェントを動かしてみたい人にとっては、試しやすい大きさのモデルが一つ増えた、という受け止め方がよさそうです。まずは、自分の作業でどれだけ役に立つかを確かめる段階といえます。</p>
+        <h2>出典</h2>
+        <ul><li>PrismML「Introducing Ternary Bonsai 2.5 27B: Powering Agentic Coding and Private Knowledge Work」（2026年11月24日）<a href="https://prismml.com/news/bonsai-2-5-27b">https://prismml.com/news/bonsai-2-5-27b</a></li><li>Hugging Face「prism-ml/Ternary-Bonsai-2.5-27B-GGUF」<a href="https://huggingface.co/prism-ml/Ternary-Bonsai-2.5-27B-GGUF">https://huggingface.co/prism-ml/Ternary-Bonsai-2.5-27B-GGUF</a></li><li>GIGAZINE「An AI model called 'Ternary Bonsai 2.5 27B' has been released, which maintains agent performance while reducing the memory usage of Qwen3.8 27B to 5.9GB」（2026年11月25日）<a href="https://gigazine.net/gsc_news/en/20261125-ternary-bonsai-2-5-27b/">https://gigazine.net/gsc_news/en/20261125-ternary-bonsai-2-5-27b/</a></li><li>Xenospectrum「Bonsai 2.5 27B Runs in 5.9GB and Narrows the Gap With Its Uncompressed Qwen Base」（2026年11月25日）<a href="https://xenospectrum.com/en/bonsai-27b-local-agent-benchmarks/">https://xenospectrum.com/en/bonsai-27b-local-agent-benchmarks/</a></li><li>PrismML公式Xアカウントの投稿（2026年11月24日、デモ動画）</li></ul>
+      </div>
+    </article>
+    <section id="related" aria-label="関連記事"></section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</div>
+<script src="news.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
