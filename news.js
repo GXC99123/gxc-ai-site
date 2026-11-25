@@ -1,6 +1,15 @@
 /* 記事の一覧データ(build.js が articles.js から自動で作ります。直接は編集しません) */
 window.GXC_NEWS = [
   {
+    "slug": "ternary-bonsai-2-5-27b",
+    "cat": "ai",
+    "date": "2026-11-24",
+    "flash": true,
+    "title": "PrismML、27Bモデルを5.9GBに圧縮した「Ternary Bonsai 2.5 27B」を発表 エージェント性能はフル精度並み",
+    "summary": "PrismMLが米国時間11月24日に発表した、Qwen3.8-27Bを土台にした三値量子化モデル。重みを-1・0・+1だけに圧縮して5.93GBに収めながら、道具呼び出しの性能はフル精度とほぼ同じ水準に達したとしています。",
+    "kw": "prismml ternary bonsai 27b qwen 量子化 三値 ローカル エージェント コーディング 5.9gb"
+  },
+  {
     "slug": "sakana-namazu-small",
     "cat": "ai",
     "date": "2026-11-25",
