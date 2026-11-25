@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>JetBrains、「Mellum2.1 Instruct」を公開 「考えない」軽量コーディングモデル、トークン約半分でSWE-benchは前世代の2倍 | GXCのAIサイト</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" data-page="article" data-slug="mellum2-1-instruct" data-cat="ai">
+  <header class="site-header" id="site-header"></header>
+
+  <main class="wrap main">
+    <article class="article cat-ai">
+      <nav class="crumbs" aria-label="パンくずリスト"><a href="index.html">トップ</a><span aria-hidden="true">›</span><a href="ai.html">AI</a></nav>
+      <div class="meta"><span class="pill">AI</span><span class="badge-flash">速報</span><time datetime="2026-11-25">2026.11.25 (水)</time></div>
+      <h1>JetBrains、「Mellum2.1 Instruct」を公開 「考えない」軽量コーディングモデル、トークン約半分でSWE-benchは前世代の2倍</h1>
+      <figure class="article-hero"><img src="images/mellum2-1-instruct.jpg" alt="小さな部品を組み立てるロボットとコードのイラスト"></figure>
+      <p class="lead">JetBrainsは2026年11月25日（水）、コーディング向けのオープンウェイトモデル「Mellum2.1 Instruct」を公開しました。10月に公開した推論型の「Mellum2.1 Thinking」の兄弟モデルで、同じ12BのMixture-of-Experts（MoE）構造を持ちながら、思考の過程を出さずに直接答えるのが特徴です。JetBrainsによると、エージェント型のコーディング作業ではThinkingの約半分のトークンでほぼ同じ成績を出し、実際の不具合修正を測るSWE-bench Verifiedでは前世代の2倍に伸びました。</p>
+      <aside class="points" aria-label="この記事のポイント">
+        <h2>この記事のポイント</h2>
+        <ul><li>Thinkingの兄弟モデルで、思考過程を出さずに直接答える「Instruct」版</li><li>エージェント型コーディングで使うトークンはThinkingの約半分（JetBrains公表値）</li><li>SWE-bench Verifiedは40.4%で、前世代の20.2%から2倍に</li><li>Apache 2.0でHugging Faceに公開、GGUF版もあり自分のPCでも動かせる</li><li>難しい数式やアルゴリズムの問題はThinkingのほうが向く</li></ul>
+      </aside>
+      <div class="article-body">
+        <h2>何が発表されたのか</h2>
+        <p>JetBrainsは2026年11月25日、公式ブログで「Mellum2.1 Instruct Is Out, Bringing Faster Answers for Coding Agents（Mellum2.1 Instructを公開、コーディングエージェント向けに速い答えを）」と発表しました。Mellumは、開発ツールで知られるJetBrainsが自社で育てているコーディング専用のモデルシリーズです。2024年にはIDEでのコード補完向けの小さなモデルとして始まり、2026年6月に12BのMoEモデル「Mellum2」へ、10月にはエージェント向けに強化学習で鍛えた「Mellum2.1 Thinking」へと進んできました。今回のInstructは、そのMellum2.1のもう一つの顔です。</p>
+        <p>構造はThinkingとまったく同じで、総パラメータ数は120億、1トークンあたりに働くのは25億パラメータだけというMoE設計、文脈は最大13万1,072トークンです。違うのは「答え方」で、Thinkingが問題を解く過程を長く書き出してから答えるのに対し、Instructは過程を出さずに直接答えます。JetBrainsはこのモデルを「サブエージェント、ツール呼び出しの繰り返し、チャット向け」と位置づけています。大きな仕事を切り分けて小さな作業を次々にこなす場面で、速さとトークンの節約を狙ったモデルです。</p>
+        <h2>「考えない」モデルが向く仕事</h2>
+        <p>推論型のモデルが強いのは、テストが落ちる原因を突き止めるような、段階を踏んで考える必要がある仕事です。けれども、コーディングエージェントの1日の仕事の多くは、そこまで重くありません。数行の修正、実行するコマンドの選択、コードベースについての質問といった、比較的軽い作業が大半です。JetBrainsのブログでは、こうした場面では「推論は時間と計算資源を増やすだけで、品質を上げない」と説明しています。</p>
+        <p>モデルを自分のPCで動かす場合は、この差がさらに大きくなります。思考のトークンは1つ1つが待ち時間になるため、JetBrainsは「ローカルで動かすほど、余計な思考トークンはそのまま待ち時間になる」と書いています。実際、Thinkingの公開後には、ローカルでモデルを動かす開発者コミュニティから「ほどほどの難しさの仕事向けに、もっと簡潔なモデルがほしい」という要望が多く寄せられたそうです。Instructは、その声に応える形で出てきました。</p>
+        <p>JetBrainsの社内テストでは、エージェント型のコーディング作業でInstructが1タスクあたりに使うトークンは平均約5,600で、Thinkingの約1万100と比べて45%少なくなりました。The New Stackの報道によると、JetBrainsはInstructを「単独でも、強いモデルの隣で速い作業者としても」使えると説明しています。難しい判断はThinkingに任せ、細かい作業はInstructに振る、という2段構えの使い方も想定されています。</p>
+        <h2>ベンチマークの数字</h2>
+        <p>JetBrainsは、Instructを前世代のMellum2 Instructと、同クラスのオープンウェイトモデルであるQwen3.5 9B、Gemma 4 E4Bと比べています。比較相手の2つは思考機能を切った状態での測定です。いずれもJetBrainsが公表した自社評価で、第三者による検証はまだありません。</p>
+        <p>いちばん大きく伸びたのは、実際のソフトウェアの不具合修正を測るSWE-bench Verifiedで、Instructは40.4%を記録し、前世代の20.2%から2倍になりました。ただし同じ条件でのQwen3.5 9Bは49.8%で、こちらが上回っています。Gemma 4 E4Bは6.4%でした。より難しい課題を集めたSWE-bench Proでは、Instructが20.0%で4つの中での首位となり、Qwen3.5 9Bの12.7%、前世代の12.0%を上回りました。7言語のコード生成を測るMultiPL-Eと、コード生成のHumanEval+でもInstructがこのグループの首位です。複数段階の道具利用を測るToolHopでは、Qwen3.5 9Bとほぼ並ぶ成績でした。</p>
+        <p>一方で、Thinkingとの差もはっきりしています。同じJetBrainsの公表値では、ThinkingはSWE-bench Verifiedで47.0%、LiveCodeBench v6で82.0%なのに対し、Instructはそれぞれ40.4%、53.7%です。アルゴリズムや数学の難しい問題では思考が欠かせないため、JetBrains自身も「そうした問題にはThinkingのほうがよい」と述べています。Instructの持ち味は、速さと軽さの代わりに、難しい問題での性能をある程度手放した設計です。</p>
+        <p>速さについては、MoEで1トークンあたりに働くパラメータが25億だけという構造が効いています。JetBrainsによると、Qwen3.5 9Bと比べて単一のリクエストでは約1.4倍、負荷がかかった状態では約1.8倍速くトークンを生成できるそうです。ただし、これもJetBrainsの10月の発表にもとづく自社測定値です。</p>
+        <h2>訓練の方法</h2>
+        <p>Instructは、Thinkingと同じ2段階の強化学習で訓練されました。まずコードや数学、道具の使い方、指示への従い方といった単独の課題を解く段階、次に実際のリポジトリの中でエージェントとして働く段階です。2段階目では、シェルやファイル編集の道具を使える環境の中で、隠れたテストに合格したときだけ報酬が与えられる仕組みで学ばせています。</p>
+        <p>訓練の土台には、NVIDIAのオープンソースの訓練ライブラリであるNeMo RLとNeMo Megatron-Bridgeが使われました。NeMo RLが生成と訓練を非同期で回し、Megatron-BridgeがNVIDIA H200とB300のGPUクラスタ全体での重み更新を担っています。JetBrainsによると、1回の訓練で1万個のサンドボックスを同時に動かし、約50万件のエージェントの行動記録を集めたそうです。</p>
+        <p>Instruct向けには2つの調整が加えられました。1つは、答えを短く保つための長さペナルティの調整で、思考を出さないモデルでも品質を落とさずにトークン数を減らす狙いがあります。もう1つは、生成と訓練の条件を近づけて、訓練を安定させる工夫です。JetBrainsは、Mellum2.1の公開を「オープンな研究やフレームワーク、データセットの上に成り立つもの」と説明し、その流れで今回も重みをオープンにしています。</p>
+        <h2>入手方法と動かし方</h2>
+        <p>Mellum2.1 Instructは、Thinkingと同じくApache 2.0ライセンスでHugging Faceに公開されています。元のbfloat16の重みのほか、自分のPCで動かすためのGGUF版も用意されています。GGUFの容量は、Q4_K_M版が8.1GB、BF16版が24.3GBです。8.1GBなら、メモリに余裕のあるノートPCや小さめのGPUでも試せる大きさです。</p>
+        <p>さらに、生成を速くする仕組みとして「マルチトークン予測（MTP）ヘッド」もInstructと同時に公開されました。次のトークンを先読みして当たればまとめて出力できる仕組みで、JetBrainsによると生成が最大1.8倍速くなります。Thinking向けのMTPヘッドは10月に先行して公開されており、今回Instruct版もそろった形です。対応する実行環境は、Transformers 5.11.0以降やvLLMなどで、JetBrainsは使い方の例も公開しています。</p>
+        <p>JetBrainsのモデルは、同社のIDEに組み込まれるだけでなく、こうして重みごと公開されることで、自分のサーバーやPCの上で動かす開発者にも届きます。クラウドのAPIに頼らず手元で動かせる点は、社内のコードを外に出したくない開発者にとって大きな意味があります。今回のInstructは、その手元で動かす用途をいちばん意識したモデルだと言えます。</p>
+        <h2>確かめておきたい注意点</h2>
+        <p>MTPヘッドによる高速化については、公表値と実測の差に注意が必要です。独立した検証メディアのInferenceKeyが、同じMTPヘッドをThinkingで試したところ、1件ずつ処理する条件では107トークン/秒から119トークン/秒へと1.11倍にとどまり、JetBrainsのうたう1.4〜1.8倍には届きませんでした。8件を同時に処理する条件では418トークン/秒から607トークン/秒へと1.45倍になり、公表の範囲内に入っています。つまり、1人で1件ずつ使う場合の体感は、公表値ほど大きくない可能性があります。</p>
+        <p>また、ベンチマークの数字はすべてJetBrainsの自社評価です。SWE-bench Verifiedの40.4%という数字も、JetBrainsが用意した同じ実行環境（Pi v0.73.1のハーネス、シェルとファイルの道具、最大11万4,000トークンの文脈）での測定です。条件が違えば数字も変わるため、自分の環境での試用が欠かせません。さらに、Instructは思考を出さないぶん、難しい問題での性能はThinkingに劣ります。何でもInstructで済ませるのではなく、問題の難しさで使い分けるのが前提のモデルです。</p>
+        <p>なお、このサイトで11月24日に紹介したPrismMLの「Ternary Bonsai 2.5 27B」も、手元のPCで動かすことを狙った小型モデルでした。あちらは27Bを5.9GBに圧縮する方向、こちらは12Bのうち25億だけを働かせて速く答える方向と、手段は違いますが、「大きいモデルをクラウドで使う」のではなく「手元で動くモデルを賢くする」という同じ流れの中にあります。</p>
+        <h2>普通のユーザーにとっての意味</h2>
+        <p>ふだんコードを書かない人にとって、Mellum2.1 Instructは直接使うものではありません。ただ、この発表が示す変化は、使う側にも関係します。コーディングエージェントの仕事の多くは、実は「ちょっとした修正」や「コードについての質問」といった軽い作業で、そうした作業まで重い推論モデルで処理するのは、時間と費用の無駄だという考え方が広がってきています。</p>
+        <p>「考えるモデル」と「すぐ答えるモデル」を使い分ける流れは、11月18日にこのサイトで紹介したGemini 4 Neonの思考レベルの切り替えとも重なります。モデル選びの基準が「一番賢いか」から「仕事に合った速さと賢さか」へ移っていることを、JetBrainsの今回の発表も裏づけています。手元で動く軽いモデルが、エージェントの部品として実用的な水準に近づいてきたことは、開発ツールの選択肢を広げる一歩だと言えそうです。</p>
+      </div>
+    </article>
+    <section id="related" aria-label="関連記事"></section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</div>
+<script src="news.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

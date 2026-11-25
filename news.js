@@ -1,6 +1,15 @@
 /* 記事の一覧データ(build.js が articles.js から自動で作ります。直接は編集しません) */
 window.GXC_NEWS = [
   {
+    "slug": "mellum2-1-instruct",
+    "cat": "ai",
+    "date": "2026-11-25",
+    "flash": true,
+    "title": "JetBrains、「Mellum2.1 Instruct」を公開 「考えない」軽量コーディングモデル、トークン約半分でSWE-benchは前世代の2倍",
+    "summary": "JetBrainsが11月25日に公開した、思考過程を出さずに直接答えるコーディングモデル。12BのMoE構造はThinkingと同じで、エージェント型コーディングで使うトークンは約半分、SWE-bench Verifiedは前世代の2倍の40.4%としています。Apache 2.0でHugging Faceに公開され、GGUF版もあります。",
+    "kw": "jetbrains mellum instruct コーディングモデル オープンウェイト moe ローカル swe-bench gguf"
+  },
+  {
     "slug": "ternary-bonsai-2-5-27b",
     "cat": "ai",
     "date": "2026-11-24",
