@@ -1,6 +1,15 @@
 /* 記事の一覧データ(build.js が articles.js から自動で作ります。直接は編集しません) */
 window.GXC_NEWS = [
   {
+    "slug": "sakana-namazu-small",
+    "cat": "ai",
+    "date": "2026-11-25",
+    "flash": true,
+    "title": "Sakana AI、300億パラメータの推論モデル「Namazu Small」を発表 4倍の規模のモデルを平均で上回る",
+    "summary": "Sakana AIが11月25日に発表した300億パラメータの推論モデル。NVIDIA Nemotron 3 Nanoを土台に継続事前学習と事後学習を自社で行い、25ベンチマークの平均で約4倍の規模のNemotron 3 Superを上回ったとしています。",
+    "kw": "sakana ai namazu small ナマズ 推論モデル nemotron オンプレミス geniac 300億"
+  },
+  {
     "slug": "claude-ship",
     "cat": "ai",
     "date": "2026-11-24",
