@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Sakana AI、300億パラメータの推論モデル「Namazu Small」を発表 4倍の規模のモデルを平均で上回る | GXCのAIサイト</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" data-page="article" data-slug="sakana-namazu-small" data-cat="ai">
+  <header class="site-header" id="site-header"></header>
+
+  <main class="wrap main">
+    <article class="article cat-ai">
+      <nav class="crumbs" aria-label="パンくずリスト"><a href="index.html">トップ</a><span aria-hidden="true">›</span><a href="ai.html">AI</a></nav>
+      <div class="meta"><span class="pill">AI</span><span class="badge-flash">速報</span><time datetime="2026-11-25">2026.11.25 (水)</time></div>
+      <h1>Sakana AI、300億パラメータの推論モデル「Namazu Small」を発表 4倍の規模のモデルを平均で上回る</h1>
+      <figure class="article-hero"><img src="images/sakana-namazu-small.jpg" alt="書類や虫眼鏡のモチーフとともに泳ぐナマズのイラスト"></figure>
+      <p class="lead">Sakana AIは11月25日、300億パラメータの推論モデル「Sakana Namazu Small」を発表しました。NVIDIAのオープンモデルを土台に、継続事前学習から事後学習までを自社で行ったモデルで、Web検索を使った調査や長文の読解といった業務で、総パラメータ数が約4倍のモデルを平均スコアで上回ったとしています。オンプレミスでの提供も予定しています。</p>
+      <aside class="points" aria-label="この記事のポイント">
+        <h2>この記事のポイント</h2>
+        <ul><li>300億パラメータの推論モデル。NVIDIA Nemotron 3 Nanoの事前学習モデルを土台に、継続事前学習と事後学習をSakana AIが自社で実施</li><li>25種類のベンチマークの平均で、同規模のNemotron 3 Nanoと約4倍の規模のNemotron 3 Superの両方を上回った（Sakana AIの公表値）</li><li>Web検索を使う調査ではBrowseCompで73.5と、Superの36.1の約2倍。長文読解のLLM-jp LongBenchでも86.0と大きくリード</li><li>一方で、内部知識だけで答えるタスクは弱く、SimpleQA Verifiedは6.8とSuperの18.1に及ばない</li><li>オンプレミスでの提供を予定し、詳細は2026年12月前半に発表予定</li></ul>
+      </aside>
+      <div class="article-body">
+        <h2>何が発表されたのか</h2>
+        <p>Sakana AIは2026年11月25日、300億パラメータの大規模言語モデル「Sakana Namazu Small」を発表しました。日常的な対話に加え、Web検索を用いた調査、長い文書の読解と根拠に基づく回答を「思考モデル（reasoning model）」として開発したもので、複雑な質問やタスクに対して、必要な情報を整理し、推論を重ねながら回答を導き出すことを目指しています。</p>
+        <p>「Namazu」は、Sakana AIがオープンモデルを土台に自社の事後学習技術で仕上げたモデルにつける名称です。2026年8月に公開された「Sakana Namazu」はMoonshot AIのKimi K2.6を土台にしていましたが、今回のNamazu Smallは土台が異なり、NVIDIAのオープンモデル「Nemotron 3 Nano」の事前学習モデルを使っています。同じ「Namazu」の名前でも、中身は別の系統のモデルです。</p>
+        <h2>土台はNVIDIAのオープンモデル</h2>
+        <p>Namazu Smallの作り方は、大きなモデルをゼロから学習するのではなく、すでにあるオープンモデルの事前学習モデルを出発点にして、Sakana AIが継続事前学習と事後学習を自社で行うというものです。事前学習だけでは決まらない性能を、その後の学習で特定の用途に合わせて仕上げる、という同社の考え方が表れています。</p>
+        <p>今回、重点を置いたのは、日常的な対話、Web検索を活用した情報収集、長文の理解と根拠に基づく回答生成といった、実際の業務で求められる能力です。社内文書や報告書を読み込んで質問に答える、複数の資料から必要な情報を整理する、出典を明示しながら要約する、最新のニュースや業界動向を複数の情報源を横断して調べる、といった使い方が想定されています。</p>
+        <p>開発は、経済産業省とNEDOによる生成AIの開発支援事業「GENIAC」の支援を受けて進められました。国内で開発されたモデルを、自社の計算基盤で運用できる大きさに収めた点も、今回の発表の特徴です。</p>
+        <h2>ベンチマーク結果：強いのは検索と長文読解</h2>
+        <p>Sakana AIは性能の検証のため、Web検索を活用した調査能力、指示追従能力、長文理解・根拠に基づく回答能力、一般知識や専門知識などを測る、合計25種類のベンチマークを使いました。比較対象は、同規模のNVIDIA Nemotron 3 Nano（30B-A3B）と、総パラメータ数が約4倍のNVIDIA Nemotron 3 Super（120B-A12B）です。比較に使ったNemotronモデルは、いずれもNVIDIAが事後学習まで行ったものです。</p>
+        <p>結果として、Namazu Smallは25ベンチマークの平均スコアで、NanoだけでなくSuperも上回ったとしています。とくに高い性能を示したのが、Web検索を活用した調査と、長い文書を理解して根拠に基づき回答するタスクです。代表的な数字は次の通りで、いずれもSakana AIが公表した自社評価の値です。</p>
+        <ul><li>BrowseComp（Web検索を何度も繰り返して答えを探す能力）：Namazu Small 73.5、Nemotron 3 Nano 29.3、Nemotron 3 Super 36.1</li><li>BrowseComp-plus：Namazu Small 50.1、Nano 33.0、Super 38.2</li><li>DeepSearchQA（深い調査の質問応答）：Namazu Small 84.3、Nano 70.7、Super 65.4</li><li>LLM-jp LongBench（日本語の長文理解）：Namazu Small 86.0、Super 60.0</li><li>FaithEval（与えられた資料に忠実に答える能力）：Namazu Small 78.3、Super 59.1</li></ul>
+        <p>BrowseCompではSuperの約2倍、LLM-jp LongBenchでは26ポイントの差がついています。検索と長文読解に強いという、狙った方向の性能が数字に表れた形です。ただ、これらはSakana AI自身の評価であり、第三者による検証はこれからです。平均で上回ったといっても、すべてのタスクで勝ったわけではない点にも注意が必要です。</p>
+        <h2>弱いところもある：内部知識だけの回答は伸び悩み</h2>
+        <p>一方で、Web検索などの外部情報に頼らず、モデルの内部知識だけで答えるタスクでは、性能が大きく伸びていません。Sakana AI自身もこの点を認め、今後の改善課題としています。</p>
+        <ul><li>SimpleQA Verified（一般知識の正確さ）：Namazu Small 6.8、Super 18.1</li><li>日本語のSimpleQA：Namazu Small 8.0、Nano 9.2、Super 24.9</li></ul>
+        <p>この結果が意味するのは、Namazu Smallは「資料や検索結果を渡して読ませる」使い方には向く一方で、「モデルの記憶に頼る質問」には向かない、ということです。社内文書や検索結果を材料にして答えさせる設計なら強みを生かせますが、何も渡さずに知識を問う使い方では、大きなモデルに及びません。導入する側は、用途をこの強みに合わせて設計する必要があります。</p>
+        <h2>オンプレミス提供と今後の展開</h2>
+        <p>Namazu Smallは、企業が自社の計算基盤で運用することも視野に入れられる大きさとして設計されており、オンプレミスでの提供も予定しています。詳細は2026年12月前半に知らせる予定で、必要な計算環境や費用は現時点では分かっていません。</p>
+        <p>Sakana AIは、今回の開発で得た知見を次世代のモデルやプロダクト開発にも生かしていくとしており、限られた計算資源で高い性能を実現し、より多くの人が自分たちの環境でAIを活用できるようにする、という考え方を示しています。まずは12月前半の詳細発表が、導入を検討する企業にとっての次の判断材料になります。</p>
+        <h2>普通のユーザーにとっての意味</h2>
+        <p>Namazu Smallは、一般の人が直接触れるモデルというより、企業の業務で使うことを想定したモデルです。ただ、影響は間接的に広がる可能性があります。社内文書を読み込んで根拠付きで答える仕組みや、Web検索を繰り返して調べる調査の手伝いが、企業のなかで使われやすくなれば、問い合わせへの回答や資料作りの速さとして、サービスの利用者に届くかもしれません。</p>
+        <p>もう一つの意味は、国内のAI開発の流れです。大きなモデルをゼロから作るのではなく、オープンモデルを土台にして、日本語の業務に必要な能力を後から仕上げるという進め方は、Sakana AIがこれまでも採ってきた方法です。300億パラメータという手元の環境で動かせる大きさで、4倍の規模のモデルを平均で上回ったという今回の結果は、この進め方が実用的な水準に届きつつあることを示しています。ただし、知識の正確さという弱点も公表されているため、導入する側は「何を任せるか」を絞って使うことが大切になりそうです。</p>
+        <h2>出典</h2>
+        <ul><li>Sakana AI「Sakana Namazu Small」（2026年11月25日）<a href="https://sakana.ai/">https://sakana.ai/</a></li><li>AIの杜「Sakana AI、300億パラメータの国産LLM『Sakana Namazu Small』を発表」（2026年11月25日）<a href="https://ai-no-mori.jp/news/20261125-697ec24a/">https://ai-no-mori.jp/news/20261125-697ec24a/</a></li><li>AlphaSignal「Sakana AI's 30B Namazu Small Beats NVIDIA's 120B Model on 25 Benchmarks」（2026年11月25日）<a href="https://alphasignal.ai/news/sakana-ai-s-30b-namazu-small-beats-nvidia-s-120b-model-on-25-benchmarks">https://alphasignal.ai/news/sakana-ai-s-30b-namazu-small-beats-nvidia-s-120b-model-on-25-benchmarks</a></li><li>SuperPowerDaily「Sakana AI introduces a 30B model it says outperforms NVIDIA's 120B rival」（2026年11月25日）<a href="https://superpowerdaily.com/posts/sakana-ai-introduces-a-30b-model-it-says-outperforms-nvidia-s-120b-rival">https://superpowerdaily.com/posts/sakana-ai-introduces-a-30b-model-it-says-outperforms-nvidia-s-120b-rival</a></li></ul>
+      </div>
+    </article>
+    <section id="related" aria-label="関連記事"></section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</div>
+<script src="news.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
