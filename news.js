@@ -1,6 +1,15 @@
 /* 記事の一覧データ(build.js が articles.js から自動で作ります。直接は編集しません) */
 window.GXC_NEWS = [
   {
+    "slug": "chariot-1",
+    "cat": "ai",
+    "date": "2026-11-26",
+    "flash": true,
+    "title": "インド、11Bの国産AI「Chariot-1」を発表 英語と10のインド言語に対応、トークン最大2.5分の1に",
+    "summary": "インド政府のIndiaAI Missionのもと、Chariot AIが11月26日に発表した国産の基盤モデル群。110億パラメータのMoE言語モデルと、英語と10のインド言語に対応する音声合成モデルからなり、12のインド文字を350字の共通文字に束ねる独自技術でインド語のトークンを最大2.5分の1に減らせるとしています（Chariotの報告）。",
+    "kw": "chariot-1 インド indiaai mission 国産基盤モデル moE 多言語 音声合成 indicshift スタンフォード"
+  },
+  {
     "slug": "deepl-aure-v2",
     "cat": "ai",
     "date": "2026-11-26",
