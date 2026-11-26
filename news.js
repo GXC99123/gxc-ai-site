@@ -1,6 +1,15 @@
 /* 記事の一覧データ(build.js が articles.js から自動で作ります。直接は編集しません) */
 window.GXC_NEWS = [
   {
+    "slug": "xpeng-iron-aiday-2026",
+    "cat": "ai",
+    "date": "2026-11-25",
+    "flash": true,
+    "title": "XPENG、人型ロボット「IRON」の新型を公開 身長170cm・76自由度、2027年1月に量産開始へ",
+    "summary": "XPENGが11月25日に広州で開いたAI Dayで、人型ロボット「IRON」の新型と、車・ロボットに共通するAI基盤「Turing Physical AI Architecture（VLA 3.0）」を発表。身長170cm・76自由度・触覚1,500点超で、2027年1月に量産、Q1に店舗で接客の訓練、Q2に正式発売を目指す。",
+    "kw": "xpeng iron 人型ロボット ヒューマノイド turing vla 物理ai ロボタクシー evtol"
+  },
+  {
     "slug": "mellum2-1-instruct",
     "cat": "ai",
     "date": "2026-11-25",
