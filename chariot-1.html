@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>インド、11Bの国産AI「Chariot-1」を発表 英語と10のインド言語に対応、トークン最大2.5分の1に | GXCのAIサイト</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" data-page="article" data-slug="chariot-1" data-cat="ai">
+  <header class="site-header" id="site-header"></header>
+
+  <main class="wrap main">
+    <article class="article cat-ai">
+      <nav class="crumbs" aria-label="パンくずリスト"><a href="index.html">トップ</a><span aria-hidden="true">›</span><a href="ai.html">AI</a></nav>
+      <div class="meta"><span class="pill">AI</span><span class="badge-flash">速報</span><time datetime="2026-11-26">2026.11.26 (木)</time></div>
+      <h1>インド、11Bの国産AI「Chariot-1」を発表 英語と10のインド言語に対応、トークン最大2.5分の1に</h1>
+      <figure class="article-hero"><img src="images/chariot-1.jpg" alt="金色の車輪から色とりどりの音の波が広がるイラスト"></figure>
+      <p class="lead">インド政府の電子情報技術省（MeitY）は2026年11月26日（木）、同国の基盤モデル開発計画「IndiaAI Mission」のもとで開発された国産の基盤モデル群「Chariot-1」を発表しました。開発したのは、計画に選ばれた最初の4チームの1つであるスタートアップのChariot Artificial Intelligenceです。言語モデルと音声合成モデルをセットにしたもので、どちらもインド国内で一から事前学習されました。言語モデルは110億パラメータの混合専門家（MoE）モデルで、インドの12の文字を350字の共通の文字に束ねる独自の工夫により、インドの言語のテキストを扱うときに使うトークンを最大で2.5分の1に減らせるとしています。</p>
+      <aside class="points" aria-label="この記事のポイント">
+        <h2>この記事のポイント</h2>
+        <ul><li>インド政府のIndiaAI Missionのもと、Chariot AIが国産の基盤モデル群「Chariot-1」を11月26日に発表</li><li>言語モデルは110億パラメータのMoE構造で、1トークンあたりの有効パラメータは40億。10.7B・1.7B・745Mの3サイズを用意</li><li>独自技術「IndicShift」で12のインド文字を350字の共通文字に束ね、インド語のトークンを最大2.5分の1に（Chariotの報告）</li><li>音声合成モデルは英語と10のインド言語に対応し、数字や日付、通貨の読み方を文脈から判断する</li><li>音声の読み上げの正確さは97%超、ヒンディー語の文字誤り率は7.60%と発表（いずれもChariot側の評価）</li></ul>
+      </aside>
+      <div class="article-body">
+        <h2>何が発表されたのか</h2>
+        <p>発表の場は、ニューデリーのバーラト・マンダパムで開かれた発表会と研究の展示会でした。MeitYのS・クリシュナン事務次官が発表を行い、Chariot AIが開発した「Chariot-1」の言語モデル（LLM）と音声合成モデル（TTS）の2つが公開されました。インド政府の発表によると、どちらも外国の土台となるモデルを流用したのではなく、インド国内で一から事前学習されたものです。</p>
+        <p>Chariot AIは、インド政府が自国の基盤モデルを育てるために進めるIndiaAI Missionで、主権的な基盤モデルの開発チームとして最初に選ばれた4チームのうちの1社です。同社は2026年の初めに、スタンフォード大学の卒業生であるパース・サルティ氏とスブラト・ブーシャン氏が設立したノイダ拠点のスタートアップで、チームは12人ほどとされています。2人は世界のAI研究所で経験を積んだのち、インドに戻ってこの会社を立ち上げました。発表会では、NVIDIAの南アジア担当マネージングディレクター、ヴィシャル・ドゥパール氏とブーシャン氏による対談も行われました。</p>
+        <p>言語モデルの「Chariot-1 LLM」は、110億パラメータの混合専門家（MoE）モデルです。MoEは、1つの入力に対して多数の専門家のうち必要な一部だけを動かす仕組みで、Chariot-1では1トークンあたり40億パラメータが有効になるとしています。全体の規模は110億でも、実際に動く部分は40億相当のため、推論にかかる計算は小さめのモデルに近くなります。サイズは10.7B、1.7B、745Mの3種類が用意され、データセンターだけでなく、ノートPCやスマートフォン、端末の上でも動かせる構成を狙っています。</p>
+        <h2>12の文字を350字に束ねる「IndicShift」</h2>
+        <p>今回の発表でいちばん特徴的なのが、インドの言語の扱い方です。インドにはヒンディー語、ベンガル語、タミル語、テルグ語など多くの言語があり、文字もそれぞれ違います。英語を中心に作られた既存のモデルでは、こうした文字を扱うときに細かく刻んだトークンに分ける必要があり、同じ内容でも英語より多くのトークンを使ってしまいがちです。トークンが増えれば、計算の量も費用も増えます。</p>
+        <p>Chariotが示した「IndicShift」は、インドの12の文字にまたがる1,012文字を、350字の共通の文字で表すという仕組みです。文字の形や音の似たもの同士を共通の文字で束ねることで、言語ごとに文字を別々に覚えるのではなく、言語のあいだの共通点を生かして処理します。Chariotの報告では、OpenAIのGPTのトークナイザーと比べて、インドの言語のテキストで使うトークンを最大で2.5分の1に減らせ、同じ計算量でインドの言語の性能が5〜8%上がったとしています。英語とコーディングの性能は保たれたとも述べています。この技術はオープンソースとして公開されています。</p>
+        <p>ここで注意したいのは、この「2.5分の1」や「5〜8%」という数字が、Chariot自身の報告によるものだという点です。条件の違う評価で同じ結果が出るかどうかは、第三者の検証が出るまで分かりません。とはいえ、文字の多い言語でトークンを減らすという考え方そのものは、インドのように多くの文字が使われる国では、モデルの利用コストを下げるうえで理にかなっています。</p>
+        <h2>3サイズを一度に学習する「Nested Training」</h2>
+        <p>2つ目の工夫は「Nested Training」と呼ばれる学習の方法です。ふつう、大きさの違うモデルを3種類作るには、3回の学習を別々に行う必要があります。Nested Trainingでは、1回の学習で3つのサイズを同時に育て、重みを共有させます。Chariotによると、3つのモデルを別々に学習するのと比べて、学習の速度が62%上がったとしています。</p>
+        <p>3つ目は「Mixture of Vocabularies」です。モデルが次の単語を選ぶとき、ふつうは語彙の全体を評価しますが、Chariot-1では語彙を11のグループに分け、関係のあるグループだけを評価するようにしました。1単語あたりに評価する語彙の項目が5.7分の1に減り、同じGPUでの学習の速度が38%上がった一方で、モデルの損失（学習の誤差の大きさ）の変化はわずかだったとしています。こちらもChariot側の報告による数字です。</p>
+        <p>この3つの工夫に共通するのは、モデルを大きくするのではなく、同じ計算量でより多くをこなす方向を目指していることです。110億パラメータという規模は、最近の最先端モデルと比べれば大きくありません。しかし、限られた計算資源でインドの多様な言語に対応し、端末の上でも動くモデルを作るという狙いには合っています。インド政府が「自国の言語と人々、ニーズに根ざした基盤技術」を掲げるなかで、効率を高める研究そのものが発表の主役になっています。</p>
+        <h2>音声合成モデルが狙う「声のAI」</h2>
+        <p>言語モデルと並んで発表された音声合成モデル「Chariot-1 TTS」は、英語と10のインド言語に対応します。対応する言語は、ヒンディー語、ベンガル語、マラーティー語、タミル語、テルグ語、カンナダ語、マラヤーラム語、グジャラート語、パンジャブ語、オディア語です。インドでは文字を読むより声でやり取りする場面が多く、音声のAIは日常生活に直結します。</p>
+        <p>この音声モデルの特徴は、数字や日付、通貨、単位、URL、略語といった「そのまま読めばよいとは限らない文字」を、文脈から判断して読み上げることです。たとえば同じ数字でも、金額なのか日付なのか電話番号なのかで読み方は変わります。固定の読み方の規則に頼るのではなく、文の意味から読み方を決める仕組みだと説明されています。</p>
+        <p>性能としては、実際の文を使った読み上げの評価「Async TTS Pronunciation Benchmark」で、97%を超える正確さが出たと発表しています。この評価は、1,029の実際の文と、42の種類にわたる2,251の「そのままでは読めない文字」の例からなります。また、文字の誤り率では、ヒンディー語で7.60%、ほかの9言語の平均で6.47%となり、比べたシステムのなかで最も低かったとしています。ただし、これらもChariot側の評価によるもので、独立した第三者のベンチマークはまだ公開されていません。</p>
+        <h2>目指す先は「音声で考えるAI」</h2>
+        <p>Chariot AIが長い目で目指しているのは、音声で考えて答える「音声推論」のモデルです。音声を聞いて意味をとらえ、考えて、声で返す。現在の発表は言語モデルと音声合成モデルですが、同社は音声認識（ASR）の技術も開発中で、将来的には音声の理解と生成を1つの仕組みにまとめたい考えです。</p>
+        <p>同社のサルティ氏は、インタビューで「ChatGPTが多くの可能性を開いたように、音声推論のモデルも、まだ思いついていない使い方を開発者が作れるようにする」と語っています。想定する使い道は、個人向けの音声アシスタントや、24時間対応のカスタマーサポートのほか、音声で操作する業務の仕組みなどです。同社は企業向けの提供を中心に考えており、開発者が音声の機能を組み込むための土台になることを狙っています。</p>
+        <p>規模の面でも、次の一歩が示されています。同社は現在、700億パラメータ級のより大きなモデルの開発に取り組んでおり、将来的には1兆パラメータ級のモデルを目指すとしています。とはいえ、チームは12人ほどと小さく、大きなモデルへの道のりはこれからです。今回の発表は、その出発点として、効率のよい学習と多言語対応の技術を示したものといえます。</p>
+        <h2>インドの国産AIをめぐる動き</h2>
+        <p>Chariot-1の発表と同じ11月26日には、インド工科大学ボンベイを中心とする政府支援の団体BharatGenも、文書を扱う視覚言語モデル「Patram 1.5」を発表しました。インドでは、IndiaAI Missionのもとで複数のチームが並行して国産モデルを開発しており、Chariot-1はそのなかで最初に成果を示した例の1つです。</p>
+        <p>発表会の場では、MeitYのクリシュナン事務次官が、インドのAI規制に関する文書も最終段階にあり、まもなく公開すると述べたことも報じられています。基盤モデルの開発と、その利用のルール作りが、同じタイミングで進んでいることがうかがえます。</p>
+        <p>インドのAI開発には、言語の多様さというほかの国にはない条件があります。公用語は22言語にのぼり、話し手の数も言語ごとに大きく違います。英語中心のモデルをそのまま使うだけでは、多くの人々の日常の言葉に届きにくくなります。Chariot-1のように、文字の共通点に注目して効率を上げる研究は、そうした条件に正面から向き合ったものといえます。</p>
+        <h2>普通のユーザーにとっての意味</h2>
+        <p>日本にいる読者にとって、Chariot-1をすぐに使う場面は多くないかもしれません。発表されたモデルは企業向けの提供が中心で、一般の利用者が直接触れる形はまだ示されていません。しかし、この発表には、日本のユーザーにも関係する見方があります。</p>
+        <p>1つは、モデルを大きくするだけが進歩ではないという点です。トークンを減らし、学習を速くし、語彙の評価を絞る。こうした効率化の工夫は、計算資源の限られた場所でもAIを動かすための技術で、端末の上で動く小さなモデルが増えているいまの流れと重なります。日本語のような、英語とは文字の仕組みが違う言語を扱ううえでも、文字の共通点に注目する考え方は参考になります。</p>
+        <p>もう1つは、音声のAIが広がる可能性です。日本でも、文字を打つより声で話す場面は増えています。数字や日付、通貨の読み方を文脈から判断する音声モデルは、日本語の読み上げでも同じ課題を抱えています。Chariot-1の音声モデルが示した「文脈から読み方を決める」という方向は、ほかの言語の音声AIにも応用できる考え方です。</p>
+        <p>数字の読み方には、繰り返しになりますが注意が必要です。トークン2.5分の1、学習速度62%向上、読み上げの正確さ97%超といった数字は、いずれも発表側の報告によるもので、独立した検証はまだありません。性能の実力は、今後の第三者の評価や、実際に使った開発者の声が出てきてから見えてきます。まずは、効率と多言語対応を両立させようとするインドの国産AIの出発点として、覚えておくとよい発表です。</p>
+        <h2>出典</h2>
+        <ul><li>インド政府 Press Information Bureau「IndiaAI Mission-supported Chariot-1 Foundation Models Launched to Boost Indigenous AI Capabilities」（2026年11月26日）<a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2341725&reg=48&lang=2">https://www.pib.gov.in/PressReleasePage.aspx?PRID=2341725&amp;reg=48&amp;lang=2</a></li><li>Inc42「IndiaAI Mission-Backed Chariot AI Unveils 11 Bn Parameter LLM, Speech Models」（2026年11月26日）<a href="https://inc42.com/buzz/indiaai-mission-backed-chariot-ai-unveils-11-bn-parameter-llm-speech-models/">https://inc42.com/buzz/indiaai-mission-backed-chariot-ai-unveils-11-bn-parameter-llm-speech-models/</a></li><li>ETTelecom「India to Unveil Major AI Regulation Papers Soon: Insights from MeitY Secretary」（2026年11月26日）<a href="https://telecom.economictimes.indiatimes.com/news/policy/ai-regulation-papers-in-final-stages-to-be-released-shortly-meity-secretary-at-chariot-1-launch/136176370">https://telecom.economictimes.indiatimes.com/news/policy/ai-regulation-papers-in-final-stages-to-be-released-shortly-meity-secretary-at-chariot-1-launch/136176370</a></li><li>DD India「IndiaAI Mission-supported Chariot-1 Foundation Models Launched to Boost Indigenous AI Capabilities」（2026年11月26日）<a href="https://ddindia.co.in/2026/11/indiaai-mission-supported-chariot-1-foundation-models-launched-to-boost-indigenous-ai-capabilities/">https://ddindia.co.in/2026/11/indiaai-mission-supported-chariot-1-foundation-models-launched-to-boost-indigenous-ai-capabilities/</a></li></ul>
+      </div>
+    </article>
+    <section id="related" aria-label="関連記事"></section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</div>
+<script src="news.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
