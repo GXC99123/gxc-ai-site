@@ -1,6 +1,15 @@
 /* 記事の一覧データ(build.js が articles.js から自動で作ります。直接は編集しません) */
 window.GXC_NEWS = [
   {
+    "slug": "deepl-aure-v2",
+    "cat": "ai",
+    "date": "2026-11-26",
+    "flash": true,
+    "title": "DeepL、音声翻訳AI「Aure v2」を発表 遅れを半分に、英日ではGeminiより誤り32%少なく",
+    "summary": "DeepLが11月26日に東京のUnmute Summitで発表した音声翻訳モデル。音声を直接ほかの言語の音声へ訳すエンドツーエンド構造と強化学習で、初代Aureと比べ翻訳の遅れの中央値を50%減らし、英日の翻訳ではGoogle Gemini 3.5 Live Translateより誤りが32%少ないとしています（いずれもDeepLの社内評価）。",
+    "kw": "deepl aure 音声翻訳 同時通訳 強化学習 エンドツーエンド gemini 日本語 英語"
+  },
+  {
     "slug": "xpeng-iron-aiday-2026",
     "cat": "ai",
     "date": "2026-11-25",
