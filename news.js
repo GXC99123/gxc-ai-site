@@ -1,6 +1,15 @@
 /* 記事の一覧データ(build.js が articles.js から自動で作ります。直接は編集しません) */
 window.GXC_NEWS = [
   {
+    "slug": "openai-private-inference",
+    "cat": "ai",
+    "date": "2026-11-26",
+    "flash": true,
+    "title": "OpenAI、「Private Inference」の試験を開始 処理中のプロンプトも暗号化で守る",
+    "summary": "OpenAIが米国時間11月25日に、企業の機密情報をAIの処理中も守る「Private Inference」を少数の顧客と試験していると発表。コンフィデンシャル・コンピューティングで処理中のプロンプトと回答を保護する仕組みで、料金や対応モデル、一般提供の時期はまだ未公表です。",
+    "kw": "openai private inference プライベートインテリジェンス コンフィデンシャルコンピューティング ゼロデータ保持 企業 プライバシー サムアルトマン"
+  },
+  {
     "slug": "chariot-1",
     "cat": "ai",
     "date": "2026-11-26",
