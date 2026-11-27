@@ -1,6 +1,15 @@
 /* 記事の一覧データ(build.js が articles.js から自動で作ります。直接は編集しません) */
 window.GXC_NEWS = [
   {
+    "slug": "liquid-d1-3-ultra",
+    "cat": "ai",
+    "date": "2026-11-27",
+    "flash": true,
+    "title": "Liquid AI、「d1.3-ultra」を発表 判断モデルの指標で首位、100万タスクあたり約60%安く",
+    "summary": "Liquid AIが11月27日にXで発表した判断モデル。Artificial AnalysisのDecision Index v2.1で76.4点を記録し、27モデル中1位になりました。順位づけ、画像・音声からの数値と日付の読み取り、音声中の発言位置の特定が新機能で、入力は100万トークンあたり0.042ドルです。",
+    "kw": "liquid ai d1.3-ultra d1 判断モデル decision index artificial analysis bison 順位づけ 抽出 音声"
+  },
+  {
     "slug": "magi-2",
     "cat": "ai",
     "date": "2026-11-24",
