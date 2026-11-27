@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>OpenAI、「Private Inference」の試験を開始 処理中のプロンプトも暗号化で守る | GXCのAIサイト</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" data-page="article" data-slug="openai-private-inference" data-cat="ai">
+  <header class="site-header" id="site-header"></header>
+
+  <main class="wrap main">
+    <article class="article cat-ai">
+      <nav class="crumbs" aria-label="パンくずリスト"><a href="index.html">トップ</a><span aria-hidden="true">›</span><a href="ai.html">AI</a></nav>
+      <div class="meta"><span class="pill">AI</span><span class="badge-flash">速報</span><time datetime="2026-11-26">2026.11.26 (木)</time></div>
+      <h1>OpenAI、「Private Inference」の試験を開始 処理中のプロンプトも暗号化で守る</h1>
+      <figure class="article-hero"><img src="images/openai-private-inference.jpg" alt="光の粒が流れるなか、盾に守られた透明な箱にデータが閉じ込められたイラスト"></figure>
+      <p class="lead">OpenAIは米国時間2026年11月25日（日本時間26日）、企業の機密情報をAIの処理中も守る新しい仕組み「Private Inference」を、少数の顧客と試験していると発表しました。CEOのサム・アルトマン氏がXで明らかにしたもので、処理の最中もプロンプトと回答を暗号化されたまま扱う「コンフィデンシャル・コンピューティング」を使います。提供はアルファ段階のAPIプレビューで、料金や対応モデル、一般提供の時期はまだ公表されていません。</p>
+      <aside class="points" aria-label="この記事のポイント">
+        <h2>この記事のポイント</h2>
+        <ul><li>OpenAIが「Private Inference」を少数の顧客と試験開始、アルトマンCEOが11月25日にXで発表</li><li>処理中のプロンプトと回答を守る「コンフィデンシャル・コンピューティング」と検証可能な管理が柱</li><li>処理後にデータを残さない「ゼロデータ保持（ZDR）」とは守る段階が違う、とOpenAIは説明</li><li>安全性の審査は「Private Safety Processing」で、人の目に触れず自動で進めるとしている</li><li>料金・対応モデル・一般提供の時期は未公表、まずは小規模な試験段階</li></ul>
+      </aside>
+      <div class="article-body">
+        <h2>何が発表されたのか</h2>
+        <p>OpenAIのサム・アルトマンCEOは2026年11月25日、Xへの投稿で「Private Inference」の試験を始めると発表しました。「少数の顧客と試験している、OpenAI Private Intelligenceの最新の取り組み」だとして、「より強いプライバシー保護があれば、フロンティアAIはもっと多くの仕事で役に立つ。企業のプライバシーは健全なエコシステムにとって重要だ」と述べています。興味のある企業には、取り組みを率いるOpenAI社員のシェカール氏（Xの@shekar4x）に連絡するよう案内しました。</p>
+        <p>Private Inferenceは、OpenAIが企業向けに用意するプライバシーとセキュリティの取り組み「Private Intelligence」の一部です。Private Intelligenceは2026年9月29日の開発者会議「DevDay 2026」で初めて示され、そのときPrivate Inferenceは「この秋に提供開始」と予告されていました。10月末までにはOpenAIの公式ページに「APIプレビュー」として掲載され、今回の発表で、実際に少数の顧客の手に渡って試験が始まったことが明らかになりました。</p>
+        <p>発表の形も今回の特徴の1つです。正式なブログ記事や記者発表ではなく、CEO本人のXへの投稿が第一報でした。投稿のあと、ThreadsやInstagramでは仕組みを図で解説する投稿が次々と広がり、発表直後の反応は、体験談よりも「何が変わるのか」を説明する内容が中心でした。利用者の具体的な使い心地の声は、まだ出ていない段階です。</p>
+        <h2>「処理中」を守るとはどういうことか</h2>
+        <p>AIのプライバシーでこれまで話題になってきたのは、たいてい「処理が終わったあと」の話でした。送ったプロンプトやAIの回答がサーバーに残るのか、学習に使われるのか、という点です。OpenAIの「ゼロデータ保持（ZDR）」も、対象になるAPIの利用では処理後にプロンプトや回答を残さない、という「あと」の保護です。</p>
+        <p>Private Inferenceが守ろうとしているのは、その手前の「処理している最中」です。OpenAIの説明では、コンフィデンシャル・コンピューティングと、検証できる厳格な管理を組み合わせ、モデルが処理しているあいだのプロンプトと回答を保護するとしています。コンフィデンシャル・コンピューティングは、ハードウェアで隔離された環境の中でデータを扱う技術で、データを使っているあいだも暗号化されたままにし、インフラの運営者でも中身を読めないようにするのが狙いです。OpenAIは、処理に使うハードウェアの安全性を独立して検証できる、とも説明しています。</p>
+        <p>OpenAIが示す処理の流れは、大きく4つの段階です。まず企業のリクエストは暗号化されたまま送られ、次にリアルタイムの安全チェックを通ります。その後、隔離された環境の中でモデルが処理し、回答が返ってきたあとはデータは残りません。安全チェックを先に通すのは、データが封じられていても、悪用を防ぐ責任はなくならないからです。</p>
+        <h2>ゼロデータ保持との違い</h2>
+        <p>Private Inferenceとゼロデータ保持は、似た名前のようで守る段階が違います。ゼロデータ保持は「処理が終わったあと、データを残さない」ことが約束です。対象になるAPIの利用では、処理後にプロンプトや回答がOpenAI側に保存されないとしています。</p>
+        <p>一方のPrivate Inferenceは「処理している最中、データを見られないようにする」ことが約束です。送るときの暗号化や処理後の不保持と合わせて、処理の前・最中・あとをひと続きで守る組み合わせになる、というのがOpenAIの考え方です。ただし、ゼロデータ保持は対象になる利用に限られるなど、条件が付いている点には注意が必要です。Private Inferenceについても、どのモデルやどの利用形態が対象になるのか、OpenAIはまだ明らかにしていません。</p>
+        <h2>安全性の審査はどう扱われるのか</h2>
+        <p>データを封じる仕組みでは、安全性の審査をどうするのかが気になるところです。AIの悪用を防ぐには、送られてきた内容に問題がないかを確かめる必要がありますが、そのために人の目で中身を見れば、守った意味が薄れてしまいます。</p>
+        <p>OpenAIはこの点を「Private Safety Processing」で解決するとしています。アルトマン氏の投稿では、ゼロデータ保持とPrivate Safety Processingを組み合わせることで、自動の安全性審査を進めつつ、OpenAIの担当者が元の内容にアクセスしないようにできる、と説明しています。報道によると、審査に回す内容は利用者が管理する保存場所に暗号化して置かれ、30日で消える仕組みだといいます。審査そのものは自動で行われ、人の手による確認は入らない設計です。</p>
+        <p>もっとも、この仕組みの細部はまだ公表されていません。どのような内容が審査に回されるのか、暗号化された保存場所の管理がどうなっているのか、第三者が検証できるのかどうかは、今後の情報公開を待つ必要があります。</p>
+        <h2>まだ分からないこと</h2>
+        <p>今回の発表は、試験の開始を知らせるもので、製品としての詳細はほとんど出ていません。OpenAIの公式ページではPrivate Inferenceは「アルファ」「APIプレビュー」と表示されていて、一般に使える状態ではありません。料金、対応するモデル、利用できる地域、申し込みの条件、一般提供の時期は、いずれも公表されていません。試験に参加している顧客の名前や人数も明かされていません。</p>
+        <p>OpenAIのシェカール氏はXで、この試験を「すべての人に向けたプライベート・インテリジェンスへの第一歩」と呼び、提供を大きく広げるためのコンフィデンシャル・コンピューティングの容量を確保している、と述べています。いまは少数の顧客だけが使っている段階で、広く提供するための土台をこれから整える、というのが現状です。試験の結果や利用者の声が出てくるのは、これからになります。</p>
+        <h2>同じ週、Anthropicも企業データの扱いを強化</h2>
+        <p>企業データの扱いをめぐる動きは、OpenAIだけではありません。同じ週の11月23日、Anthropicは企業向けに、APIの利用後にプロンプトや回答を保存しない「ゼロデータ保持」の方針を発表しました。11月25日には、モデルの回答を対象にした不正利用の検出機能「Enterprise Frontier Safeguards」を公開ベータで開いています。こちらは利用者のデータを保持せずに、設定したルールに照らして回答を評価し、判定と確信度を返す仕組みです。</p>
+        <p>さらにAnthropicは10月、コンフィデンシャルAIを手がけるOpaqueの技術をライセンスし、技術者を迎え入れたと報じられています。Opaqueは、機密データを処理中も守る技術を実用化してきた会社です。OpenAIが処理中の保護を試験し始めたのと、Anthropicが保持しない方針と検出機能をそろえたのは、同じ方向を向いた動きといえます。企業がAIに機密情報を預けるかどうかは、いまやモデル同士の競争の軸の1つになっています。</p>
+        <p>ただし、両社の取り組みは同じものではありません。Anthropicのゼロデータ保持は処理後の保存をなくすもので、OpenAIのPrivate Inferenceは処理中の保護をめざすものです。どちらが自社の仕事に合うかは、扱うデータの種類や、社内の規則によって変わります。いまは両社とも、詳細な仕様や検証の方法をこれから明らかにしていく段階です。</p>
+        <h2>普通のユーザーにとっての意味</h2>
+        <p>Private Inferenceは、まず企業向けのAPIの話で、ふだんChatGPTを使う個人に直接の変化はありません。料金も時期も決まっていないため、いますぐ申し込めるものでもありません。</p>
+        <p>それでも、方向性としては個人の利用にも関わってきます。法律や医療、金融のような機密性の高い仕事では、「AIに送った内容が、処理中も含めて誰にも見られないか」が導入の分かれ目になります。これまでは、その条件を満たせずにAIの利用を見送っていた企業もありました。処理中の保護が当たり前になれば、そうした仕事でもAIを使える場面が広がります。企業向けの機能が、やがて個人向けのサービスにも広がる例はこれまでもありました。まずは、試験の広がりと料金の発表を待つ段階です。</p>
+        <h2>出典</h2>
+        <ul><li>Sam Altman氏のX投稿（2026年11月25日）</li><li>CNBC TV18「Sam Altman announces OpenAI's Private Inference: What's the new privacy feature and how does it work」（2026年11月26日）<a href="https://www.cnbctv18.com/technology/sam-altman-announces-openai-private-inference-whats-the-new-privacy-feature-and-how-does-it-work-20041890.htm">https://www.cnbctv18.com/technology/sam-altman-announces-openai-private-inference-whats-the-new-privacy-feature-and-how-does-it-work-20041890.htm</a></li><li>Zeniteq「OpenAI Private Inference Enters Customer Testing」（2026年11月26日）<a href="https://www.zeniteq.com/news/openai-private-inference-enters-customer-testing-tu1z2v">https://www.zeniteq.com/news/openai-private-inference-enters-customer-testing-tu1z2v</a></li><li>Cryptopolitan「OpenAI lines up confidential compute to scale Private Inference」（2026年11月26日）<a href="https://www.cryptopolitan.com/openai-compute-scale-private-inference/">https://www.cryptopolitan.com/openai-compute-scale-private-inference/</a></li><li>DeAI「OpenAI's Private Intelligence adds a Private Inference API preview」（2026年10月31日）<a href="https://www.deai.org/news/openai-private-intelligence-preview">https://www.deai.org/news/openai-private-intelligence-preview</a></li><li>Emergent「Anthropic Zero Data Retention Policy Launches for Claude AI」（2026年11月23日）<a href="https://emergent.sh/news/anthropic-zero-data-retention-policy-launches">https://emergent.sh/news/anthropic-zero-data-retention-policy-launches</a></li></ul>
+      </div>
+    </article>
+    <section id="related" aria-label="関連記事"></section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</div>
+<script src="news.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
