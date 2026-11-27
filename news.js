@@ -1,6 +1,15 @@
 /* 記事の一覧データ(build.js が articles.js から自動で作ります。直接は編集しません) */
 window.GXC_NEWS = [
   {
+    "slug": "magi-2",
+    "cat": "ai",
+    "date": "2026-11-24",
+    "flash": true,
+    "title": "Sand AI、「MAGI-2」を発表 480Bの動画生成モデル、30秒の1080pを音声付きで生成",
+    "summary": "Sand AIが11月24日に発表した動画生成モデル。4800億パラメータのMoE構造で、最大30秒の1080p動画をセリフや効果音、音楽まで含めた音声付きで一度に生成します。画像・動画・音声あわせて最大20件の参照と、時間指定のカット制御にも対応。APIは1秒あたり0.08ドルで、重みの公開は近日中としています。",
+    "kw": "sand ai magi-2 動画生成 ビデオ ai動画 480b moe 1080p 30秒 音声 higgsfield"
+  },
+  {
     "slug": "openai-private-inference",
     "cat": "ai",
     "date": "2026-11-26",
