@@ -1,6 +1,15 @@
 /* 記事の一覧データ(build.js が articles.js から自動で作ります。直接は編集しません) */
 window.GXC_NEWS = [
   {
+    "slug": "gigachat-4",
+    "cat": "ai",
+    "date": "2026-11-26",
+    "flash": true,
+    "title": "Sber、「GigaChat 4」を発表 708BをMITライセンスで公開、100万トークンに対応",
+    "summary": "ロシア最大の銀行Sberが11月26日にモスクワのAI Journeyで発表した大規模言語モデル。旗艦は708B総パラメータ・41BアクティブでMITライセンス、文脈は約100万トークン。すぐ答えるモードと思考モードを1つのモデルに統合し、SWE-bench Verifiedは80.89%、Terminal-Bench 2.0は71.26%としています（いずれもSber自身の報告）。小型の37Bモデルも同時公開されましたが、こちらは個人の非商用ライセンスです。",
+    "kw": "sber gigachat ギガチャット ロシア オープンウェイト mitライセンス 708b moe 100万トークン swe-bench terminal-bench ai journey"
+  },
+  {
     "slug": "cognition-swe-2-1",
     "cat": "ai",
     "date": "2026-11-24",
