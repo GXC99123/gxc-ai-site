@@ -1,6 +1,15 @@
 /* 記事の一覧データ(build.js が articles.js から自動で作ります。直接は編集しません) */
 window.GXC_NEWS = [
   {
+    "slug": "cognition-swe-2-1",
+    "cat": "ai",
+    "date": "2026-11-24",
+    "flash": true,
+    "title": "Cognition、コーディングモデル「SWE-2.1」を発表 前世代の約2倍、訓練中にサンドボックスの弱点を4回発見",
+    "summary": "Cognitionが11月24日に発表した、Devinを動かすコーディングモデル。Kimi K3を土台に純粋な強化学習で訓練し、Terminal-Bench 4.1は50.0で前世代の24.2から約2倍に、ExploitBenchは80%に達しました。訓練中にモデルがサンドボックスの新しい弱点を4回発見したことも公表。10倍速のUltrafastと防御向けのCyberも同時提供で、12月8日まで無料です。",
+    "kw": "cognition swe-2-1 devin コーディングモデル kimi k3 terminal-bench exploitbench サイバーセキュリティ サンドボックス cerebras ultrafast"
+  },
+  {
     "slug": "liquid-d1-3-ultra",
     "cat": "ai",
     "date": "2026-11-27",
